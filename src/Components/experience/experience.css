@@ -1,0 +1,213 @@
+/* =========================================================
+   EXPERIENCE / EXPERTISE SECTION
+   ========================================================= */
+
+.experience_container {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 1.5rem;
+
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+
+/* =========================
+   EXPERIENCE CARDS
+   ========================= */
+
+.experience_container > div {
+    position: relative;
+
+    padding: 2.25rem;
+
+    background: var(--color-white);
+
+    border: 1px solid var(--color-border);
+
+    border-radius: var(--radius-xl);
+
+    box-shadow: var(--shadow-sm);
+
+    transition: var(--transition);
+}
+
+
+/* Top accent */
+
+.experience_container > div::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 2rem;
+    right: 2rem;
+
+    height: 3px;
+
+    border-radius: 0 0 10px 10px;
+
+    background: var(--color-primary);
+
+    opacity: 0.8;
+}
+
+
+/* Hover */
+
+.experience_container > div:hover {
+    transform: translateY(-5px);
+
+    border-color: rgba(99, 91, 255, 0.25);
+
+    box-shadow: var(--shadow-md);
+}
+
+
+/* =========================
+   CARD HEADING
+   ========================= */
+
+.experience_container > div > h2 {
+    margin-bottom: 2rem;
+
+    text-align: center;
+
+    color: var(--color-text);
+
+    font-size: 1.35rem;
+}
+
+
+/* Optional subtitle */
+
+.experience_container > div > p {
+    margin-top: -1.25rem;
+
+    margin-bottom: 1.75rem;
+
+    text-align: center;
+
+    color: var(--color-text-light);
+
+    font-size: 0.85rem;
+}
+
+
+/* =========================
+   EXPERIENCE CONTENT
+   ========================= */
+
+.experience_content {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 1.5rem 1rem;
+}
+
+
+/* =========================
+   EXPERIENCE DETAILS
+   ========================= */
+
+.experience_details {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 0.8rem;
+}
+
+
+/* Icon */
+
+.experience-icons {
+    flex-shrink: 0;
+
+    margin-top: 3px;
+
+    color: var(--color-primary);
+
+    font-size: 1.1rem;
+}
+
+
+/* Details heading */
+
+.experience_details h4 {
+    margin-bottom: 0.2rem;
+
+    color: var(--color-text);
+
+    font-size: 0.9rem;
+}
+
+
+/* Details text */
+
+.experience_details small {
+    display: block;
+
+    color: var(--color-text-light);
+
+    font-size: 0.75rem;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media screen and (max-width: 1024px) {
+
+    .experience_container {
+        grid-template-columns: 1fr;
+
+        width: min(90%, 700px);
+    }
+
+    .experience_container > div {
+        padding: 2rem;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media screen and (max-width: 600px) {
+
+    .experience_container {
+        width: var(--container-width-sm);
+
+        gap: 1rem;
+    }
+
+    .experience_container > div {
+        padding: 2rem 1.25rem;
+
+        border-radius: var(--radius-lg);
+    }
+
+    .experience_container > div::before {
+        left: 1.25rem;
+        right: 1.25rem;
+    }
+
+    .experience_content {
+        grid-template-columns: 1fr;
+
+        gap: 1.25rem;
+    }
+
+    .experience_container > div > h2 {
+        font-size: 1.2rem;
+    }
+}

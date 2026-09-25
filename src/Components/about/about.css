@@ -1,0 +1,319 @@
+/* =========================================================
+   ABOUT SECTION
+   ========================================================= */
+
+.about_container {
+    display: grid;
+
+    grid-template-columns: 0.85fr 1.15fr;
+
+    align-items: center;
+
+    gap: 5rem;
+}
+
+
+/* =========================
+   ABOUT VIDEO
+   ========================= */
+
+.about_me {
+    position: relative;
+
+    width: 100%;
+    max-width: 420px;
+
+    aspect-ratio: 1 / 1;
+
+    margin: 0 auto;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 2rem;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--color-primary-light),
+            rgba(99, 91, 255, 0.15)
+        );
+
+    box-shadow: var(--shadow-md);
+}
+
+
+/* Video */
+
+.about_me-image {
+    width: 98%;
+    height: 98%;
+
+    border-radius: 1.5rem;
+
+    overflow: hidden;
+
+    transform: none;
+
+    border: 6px solid var(--color-white);
+
+    background: var(--color-black);
+
+    box-shadow: var(--shadow-lg);
+
+    transition: var(--transition);
+}
+
+
+.about_me-image video {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: contain;
+}
+
+
+
+/* =========================
+   ABOUT CONTENT
+   ========================= */
+
+.about_content {
+    max-width: 650px;
+}
+
+
+.paragraph {
+    margin-top: 2rem;
+}
+
+
+.paragraph p {
+    margin-bottom: 1rem;
+
+    color: var(--color-text-secondary);
+
+    line-height: 1.8;
+
+    font-size: 1rem;
+}
+
+
+/* =========================
+   ABOUT CARDS
+   ========================= */
+
+.about_cards {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 1rem;
+
+    margin-top: 1rem;
+}
+
+
+.about_card {
+    padding: 1.5rem 1rem;
+
+    text-align: center;
+
+    background: var(--color-white);
+
+    border: 1px solid var(--color-border);
+
+    border-radius: var(--radius-lg);
+
+    box-shadow: var(--shadow-sm);
+
+    transition: var(--transition);
+}
+
+
+.about_card:hover {
+    transform: translateY(-5px);
+
+    border-color: rgba(99, 91, 255, 0.25);
+
+    box-shadow: var(--shadow-md);
+}
+
+
+/* =========================
+   ICON
+   ========================= */
+
+.about_icon {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 46px;
+    height: 46px;
+
+    margin-bottom: 1rem;
+
+    border-radius: 12px;
+
+    background: var(--color-primary-light);
+
+    color: var(--color-primary);
+
+    font-size: 1.25rem;
+
+    transition: var(--transition);
+}
+
+
+.about_card:hover .about_icon {
+    background: var(--color-primary);
+
+    color: var(--color-white);
+}
+
+
+/* =========================
+   CARD TEXT
+   ========================= */
+
+.about_card h5 {
+    margin-bottom: 0.35rem;
+
+    font-size: 0.95rem;
+
+    color: var(--color-text);
+}
+
+
+.about_card small {
+    display: block;
+
+    color: var(--color-text-light);
+
+    font-size: 0.75rem;
+
+    line-height: 1.5;
+}
+
+
+/* =========================
+   BUTTON
+   ========================= */
+
+.about_content .btn {
+    margin-top: 0.5rem;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media screen and (max-width: 1024px) {
+
+    .about_container {
+        grid-template-columns: 1fr;
+
+        gap: 3rem;
+
+        text-align: center;
+    }
+
+
+    .about_me {
+        width: 50%;
+
+        min-width: 280px;
+    }
+
+
+    .about_content {
+        max-width: 700px;
+
+        margin: 0 auto;
+    }
+
+
+    .paragraph {
+        margin-top: 1.5rem;
+    }
+
+
+    .paragraph p {
+        margin: 0 auto 1rem;
+    }
+
+
+    .about_content .btn {
+        margin-top: 1rem;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media screen and (max-width: 600px) {
+
+    .about_container {
+        gap: 2.5rem;
+    }
+
+
+    .about_me {
+        width: 70%;
+
+        min-width: 220px;
+    }
+
+
+    .about_me-image {
+        border-width: 4px;
+
+        border-radius: 1.25rem;
+    }
+
+
+    .about_cards {
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 0.75rem;
+
+        margin-top: 1.5rem;
+    }
+
+
+    .about_card {
+        padding: 1.25rem 0.75rem;
+    }
+
+
+    .about_icon {
+        width: 40px;
+        height: 40px;
+
+        margin-bottom: 0.75rem;
+
+        font-size: 1rem;
+    }
+
+
+    .about_card h5 {
+        font-size: 0.85rem;
+    }
+
+
+    .about_card small {
+        font-size: 0.7rem;
+    }
+
+
+    .paragraph p {
+        line-height: 1.7;
+    }
+}

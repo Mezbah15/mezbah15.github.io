@@ -1,0 +1,190 @@
+/* =========================
+   TESTIMONIALS
+========================= */
+
+.container.testimonial_container {
+    width: 55%;
+    max-width: 750px;
+
+    padding-bottom: 4rem;
+}
+
+
+/* =========================
+   TESTIMONIAL CARD
+========================= */
+
+.testimonial {
+    background: var(--color-white);
+
+    text-align: center;
+
+    padding: 2.25rem 2.5rem;
+
+    border: 1px solid var(--color-border);
+
+    border-radius: 1.25rem;
+
+    box-shadow: var(--shadow-sm);
+
+    user-select: none;
+
+    transition: var(--transition);
+}
+
+.testimonial:hover {
+    border-color: rgba(99, 91, 255, 0.2);
+
+    box-shadow: var(--shadow-lg);
+}
+
+
+/* =========================
+   CLIENT AVATAR
+========================= */
+
+.client-avatar {
+    width: 4.5rem;
+    aspect-ratio: 1 / 1;
+
+    overflow: hidden;
+
+    margin: 0 auto 1.25rem;
+
+    border: 3px solid var(--color-primary-light);
+
+    border-radius: 50%;
+
+    background: var(--color-bg-soft);
+}
+
+.client-avatar img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+/* =========================
+   CLIENT NAME
+========================= */
+
+.testimonial h5 {
+    margin-bottom: 0.25rem;
+
+    color: var(--color-text);
+
+    font-size: 1rem;
+}
+
+.testimonial small {
+    color: var(--color-text-light);
+
+    font-size: 0.8rem;
+}
+
+
+/* =========================
+   REVIEW
+========================= */
+
+.client-review {
+    display: block;
+
+    width: 90%;
+
+    margin: 1rem auto 0;
+
+    color: var(--color-text-light);
+
+    font-size: 0.95rem;
+
+    line-height: 1.7;
+}
+
+
+/* =========================
+   QUOTE MARK
+========================= */
+
+.testimonial::before {
+    content: "“";
+
+    display: block;
+
+    color: var(--color-primary);
+
+    font-family: Georgia, serif;
+
+    font-size: 3rem;
+
+    line-height: 1;
+
+    height: 1.5rem;
+
+    margin-bottom: 0.5rem;
+}
+
+
+/* =========================
+   SWIPER PAGINATION
+========================= */
+
+.swiper-pagination {
+    bottom: 0 !important;
+}
+
+.swiper-pagination-clickable .swiper-pagination-bullet {
+    background: var(--color-primary);
+
+    opacity: 0.35;
+}
+
+.swiper-pagination-clickable .swiper-pagination-bullet-active {
+    opacity: 1;
+}
+
+
+/* =========================
+   MEDIUM DEVICES
+========================= */
+
+@media screen and (max-width: 1024px) {
+
+    .container.testimonial_container {
+        width: 70%;
+    }
+
+    .testimonial {
+        padding: 2rem;
+    }
+}
+
+
+/* =========================
+   SMALL DEVICES
+========================= */
+
+@media screen and (max-width: 600px) {
+
+    .container.testimonial_container {
+        width: var(--container-width-sm);
+
+        padding-bottom: 3.5rem;
+    }
+
+    .testimonial {
+        padding: 1.75rem 1.25rem;
+    }
+
+    .client-review {
+        width: 100%;
+
+        font-size: 0.9rem;
+    }
+
+    .client-avatar {
+        width: 4rem;
+    }
+}

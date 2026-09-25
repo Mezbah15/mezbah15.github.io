@@ -1,0 +1,261 @@
+/* =========================
+   SOCIAL RESELL
+========================= */
+
+.social_resell {
+    padding: 5rem 0;
+}
+
+
+/* =========================
+   CONTAINER
+========================= */
+
+.social_resell-container {
+    display: grid;
+    grid-template-columns: 1.5fr 0.8fr;
+    align-items: center;
+    gap: 4rem;
+
+    padding: 3.5rem 4rem;
+
+    background: var(--color-primary);
+    border-radius: var(--radius-lg);
+
+    overflow: hidden;
+    position: relative;
+
+    box-shadow: var(--shadow-lg);
+}
+
+
+/* =========================
+   CONTENT
+========================= */
+
+.social_resell-content {
+    position: relative;
+    z-index: 2;
+}
+
+
+/* =========================
+   BADGE
+========================= */
+
+.social_resell-badge {
+    display: inline-flex;
+    align-items: center;
+
+    padding: 0.45rem 0.85rem;
+
+    margin-bottom: 1.25rem;
+
+    border-radius: 50px;
+
+    background: var(--color-white);
+    color: var(--color-primary);
+
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08rem;
+}
+
+
+/* =========================
+   HEADING
+========================= */
+
+.social_resell h2 {
+    max-width: 650px;
+    margin-bottom: 1rem;
+
+    color: var(--color-white);
+
+    font-size: 2.8rem;
+    line-height: 1.15;
+}
+
+.social_resell h2 span {
+    color: inherit;
+}
+
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+.social_resell-description {
+    max-width: 650px;
+
+    margin-bottom: 1.75rem;
+
+    color: rgba(255, 255, 255, 0.85);
+
+    line-height: 1.7;
+}
+
+
+/* =========================
+   BENEFITS
+========================= */
+
+.social_resell-benefits {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem 1.5rem;
+
+    margin-bottom: 2rem;
+}
+
+.social_resell-benefits div {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    color: var(--color-white);
+
+    font-size: 0.9rem;
+}
+
+.social_resell-benefits span {
+    font-weight: 700;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.social_resell-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0.85rem 1.4rem;
+
+    border-radius: var(--radius-sm);
+
+    background: var(--color-white);
+    color: var(--color-primary);
+
+    font-weight: 600;
+    text-decoration: none;
+
+    transition: var(--transition);
+}
+
+.social_resell-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+}
+
+
+/* =========================
+   OFFER VISUAL
+========================= */
+
+.social_resell-offer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+    z-index: 2;
+
+    text-align: center;
+}
+
+.offer-circle {
+    width: 210px;
+    height: 210px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: var(--color-white);
+
+    box-shadow: var(--shadow-lg);
+
+    transform: rotate(5deg);
+}
+
+.offer-circle span {
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.15rem;
+}
+
+.offer-circle strong {
+    margin-top: 0.35rem;
+
+    font-size: 1.5rem;
+}
+
+.social_resell-offer p {
+    margin-top: 1.25rem;
+
+    color: var(--color-white);
+
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media screen and (max-width: 900px) {
+
+    .social_resell-container {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+
+        padding: 3rem 2.5rem;
+    }
+
+    .social_resell-offer {
+        display: none;
+    }
+
+    .social_resell h2 {
+        font-size: 2.4rem;
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media screen and (max-width: 600px) {
+
+    .social_resell {
+        padding: 3rem 0;
+    }
+
+    .social_resell-container {
+        padding: 2.5rem 1.5rem;
+
+        border-radius: var(--radius-md);
+    }
+
+    .social_resell h2 {
+        font-size: 2rem;
+    }
+
+    .social_resell-benefits {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .social_resell-btn {
+        width: 100%;
+    }
+}

@@ -1,0 +1,360 @@
+/* =========================
+   PORTFOLIO
+========================= */
+
+#portfolio {
+    padding: 5rem 0;
+}
+
+.portfolio_section {
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.portfolio_header {
+    max-width: 720px;
+    margin: 0 auto 2.5rem;
+    text-align: center;
+}
+
+.portfolio_header h5 {
+    color: var(--color-primary);
+    margin-bottom: 0.7rem;
+}
+
+.portfolio_header h2 {
+    margin-bottom: 1rem;
+}
+
+.portfolio_header p {
+    color: var(--color-light);
+    line-height: 1.7;
+}
+
+
+/* =========================
+   FILTERS
+========================= */
+
+.portfolio_filters {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+
+    margin-bottom: 2.5rem;
+}
+
+.portfolio_filter {
+    padding: 0.55rem 1rem;
+
+    border: 1px solid var(--color-light);
+    border-radius: var(--radius-sm);
+
+    background: transparent;
+    color: var(--color-white);
+
+    font-size: 0.85rem;
+    font-weight: 500;
+
+    cursor: pointer;
+
+    transition: var(--transition);
+}
+
+.portfolio_filter:hover,
+.portfolio_filter.active {
+    background: var(--color-primary);
+    border-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+
+/* =========================
+   CASE STUDY GRID
+========================= */
+
+.portfolio_container {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 1.5rem;
+}
+
+
+/* =========================
+   CASE STUDY CARD
+========================= */
+
+.portfolio_item {
+    overflow: hidden;
+
+    background: var(--color-white);
+
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: var(--radius-lg);
+
+    transition: var(--transition);
+
+    box-shadow: var(--shadow-sm);
+}
+
+.portfolio_item:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lg);
+}
+
+
+/* =========================
+   IMAGE
+========================= */
+
+.portfolio_item-image {
+    width: 100%;
+    height: 230px;
+
+    overflow: hidden;
+
+    background: var(--color-black);
+}
+
+.portfolio_item-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: var(--transition);
+}
+
+.portfolio_item:hover .portfolio_item-image img {
+    transform: scale(1.04);
+}
+
+
+/* =========================
+   CONTENT
+========================= */
+
+.portfolio_item-content {
+    padding: 1.5rem;
+}
+
+.portfolio_item-category {
+    display: block;
+
+    margin-bottom: 0.7rem;
+
+    color: var(--color-primary);
+
+    font-size: 0.7rem;
+    font-weight: 700;
+
+    letter-spacing: 0.08rem;
+    text-transform: uppercase;
+}
+
+.portfolio_item-content h3 {
+    margin-bottom: 0.8rem;
+
+    color: var(--color-black);
+
+    font-size: 1.25rem;
+    line-height: 1.35;
+}
+
+.portfolio_item-content p {
+    margin-bottom: 1.2rem;
+
+    color: #666;
+
+    font-size: 0.9rem;
+    line-height: 1.65;
+}
+
+
+/* =========================
+   TAGS
+========================= */
+
+.portfolio_item-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+
+    margin-bottom: 1.3rem;
+}
+
+.portfolio_item-tags span {
+    padding: 0.35rem 0.65rem;
+
+    background: rgba(0, 0, 0, 0.05);
+
+    border-radius: 50px;
+
+    color: #555;
+
+    font-size: 0.7rem;
+    font-weight: 500;
+}
+
+
+/* =========================
+   CASE STUDY LINK
+========================= */
+
+.portfolio_case-link {
+    display: inline-flex;
+
+    align-items: center;
+    gap: 0.5rem;
+
+    color: var(--color-primary);
+
+    font-size: 0.9rem;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition: var(--transition);
+}
+
+.portfolio_case-link span {
+    font-size: 1.1rem;
+
+    transition: var(--transition);
+}
+
+.portfolio_case-link:hover span {
+    transform: translateX(5px);
+}
+
+
+/* =========================
+   BOTTOM CTA
+========================= */
+
+.portfolio_bottom {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 2rem;
+
+    margin-top: 4rem;
+    padding: 2rem 2.2rem;
+
+    background: var(--color-white);
+
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: var(--radius-lg);
+
+    box-shadow: var(--shadow-sm);
+}
+
+.portfolio_bottom h3 {
+    margin-bottom: 0.5rem;
+
+    color: var(--color-black);
+}
+
+.portfolio_bottom p {
+    margin: 0;
+
+    color: #666;
+
+    font-size: 0.9rem;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media screen and (max-width: 1024px) {
+
+    .portfolio_section {
+        width: var(--container-width-md);
+    }
+
+    .portfolio_container {
+        gap: 1.2rem;
+    }
+
+    .portfolio_item-image {
+        height: 210px;
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media screen and (max-width: 600px) {
+
+    #portfolio {
+        padding: 3rem 0;
+    }
+
+    .portfolio_section {
+        width: var(--container-width-sm);
+    }
+
+    .portfolio_header {
+        margin-bottom: 2rem;
+    }
+
+    .portfolio_header h2 {
+        font-size: 1.8rem;
+    }
+
+    .portfolio_filters {
+        justify-content: flex-start;
+
+        overflow-x: auto;
+        flex-wrap: nowrap;
+
+        padding-bottom: 0.5rem;
+
+        scrollbar-width: none;
+    }
+
+    .portfolio_filters::-webkit-scrollbar {
+        display: none;
+    }
+
+    .portfolio_filter {
+        flex-shrink: 0;
+    }
+
+    .portfolio_container {
+        grid-template-columns: 1fr;
+    }
+
+    .portfolio_item-image {
+        height: 220px;
+    }
+
+    .portfolio_bottom {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        padding: 1.5rem;
+    }
+
+    .portfolio_bottom .btn {
+        width: 100%;
+    }
+
+}

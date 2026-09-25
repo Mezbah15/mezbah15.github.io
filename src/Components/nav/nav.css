@@ -1,0 +1,158 @@
+/* =========================
+   FLOATING NAVIGATION
+========================= */
+
+nav {
+    position: fixed;
+    z-index: 1000;
+
+    left: 50%;
+    bottom: 1.5rem;
+
+    transform: translateX(-50%);
+
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+
+    width: max-content;
+    max-width: calc(100% - 2rem);
+
+    padding: 0.45rem;
+
+    background: rgba(255, 255, 255, 0.88);
+
+    border: 1px solid var(--color-border);
+
+    border-radius: 999px;
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    box-shadow:
+        0 12px 35px rgba(15, 23, 42, 0.10),
+        0 3px 10px rgba(15, 23, 42, 0.04);
+}
+
+
+/* =========================
+   NAVIGATION LINKS
+========================= */
+
+nav a {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 44px;
+    height: 44px;
+
+    padding: 0;
+
+    border-radius: 50%;
+
+    background: transparent;
+
+    color: var(--color-text-light);
+
+    font-size: 1.05rem;
+
+    transition: var(--transition);
+}
+
+
+/* Hover */
+
+nav a:hover {
+    color: var(--color-primary);
+
+    background: var(--color-primary-light);
+
+    transform: translateY(-2px);
+}
+
+
+/* Active */
+
+nav a.active {
+    color: var(--color-white);
+
+    background: var(--color-primary);
+
+    box-shadow: 0 5px 15px rgba(99, 91, 255, 0.22);
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================
+   TOOLTIP
+========================= */
+
+nav a::after {
+    content: attr(data-tooltip);
+
+    position: absolute;
+
+    bottom: calc(100% + 10px);
+    left: 50%;
+
+    transform: translateX(-50%) translateY(5px);
+
+    padding: 0.4rem 0.65rem;
+
+    border-radius: 6px;
+
+    background: var(--color-bg-dark);
+    color: var(--color-white);
+
+    font-size: 0.7rem;
+    font-weight: 500;
+
+    white-space: nowrap;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: var(--transition);
+
+    pointer-events: none;
+}
+
+nav a:hover::after {
+    opacity: 1;
+    visibility: visible;
+
+    transform: translateX(-50%) translateY(0);
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media screen and (max-width: 600px) {
+
+    nav {
+        bottom: 1rem;
+
+        width: calc(100% - 2rem);
+
+        justify-content: space-around;
+
+        padding: 0.4rem;
+    }
+
+    nav a {
+        width: 42px;
+        height: 42px;
+
+        font-size: 1rem;
+    }
+
+    nav a::after {
+        display: none;
+    }
+}
